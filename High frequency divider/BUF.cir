@@ -1,0 +1,10 @@
+*** BUF ***
+.subckt    BUF    input    output    wmin
+
+MP1    node1    input    vdd    vdd    pmos    l=90n   w=3*wmin
+MN1    node1    input    gnd    gnd    nmos    l=90n   w=wmin
+
+MP2    output    node1    vdd    vdd    pmos    l=90n   w=3*wmin
+MN2    output    node1    gnd    gnd    nmos    l=90n   w=wmin
+
+.ends

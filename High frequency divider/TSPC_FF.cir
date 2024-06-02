@@ -1,0 +1,18 @@
+**TSPC_FF**
+.subckt  TSPC_FF  input  CLK  Q  Q_bar   wmin
+
+MP1  node1   input   vdd     vdd    pmos    l=90n    w=6*wmin
+MP2  node2   CLK     node1   vdd    pmos    l=90n    w=6*wmin
+MN1  node2   input   gnd     gnd    nmos    l=90n    w=wmin
+
+MP3  node3   node2   vdd     vdd    pmos    l=90n    w=6*wmin
+MP4  node4   CLK     node3   vdd    pmos    l=90n    w=6*wmin
+MN2  node4   node2   gnd     gnd    nmos    l=90n    w=wmin
+
+MP5  Q_bar   Q       vdd     vdd    pmos    l=90n    w=3*wmin
+MP6  Q       Q_bar   vdd     vdd    pmos    l=90n    w=3*wmin
+MN3  Q_bar   node4   node5   gnd    nmos    l=90n    w=2*wmin
+MN4  Q       node2   node5   gnd    nmos    l=90n    w=2*wmin
+MN5  node5   CLK     gnd     gnd    nmos    l=90n    w=wmin
+
+.ends

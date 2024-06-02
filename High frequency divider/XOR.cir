@@ -1,0 +1,13 @@
+**XOR**
+.subckt  XOR  input1  input2  output  wmin
+
+MP1  node1   input1  vdd      vdd    pmos    l=90n    w=3*wmin
+MN1  node1   input1  gnd      gnd    nmos    l=90n    w=wmin
+
+MP2  output  input2  input1   vdd    pmos    l=90n    w=3*wmin
+MN2  output  input2  node1    gnd    nmos    l=90n    w=wmin
+
+MP3  input2  input1  output   vdd    pmos    l=90n    w=3*wmin
+MN3  input2  node1   output   gnd    nmos    l=90n    w=wmin
+
+.ends

@@ -1,0 +1,7 @@
+*** INV ***
+.subckt    INV    input    output    wmin
+
+MP1    output    input    vdd    vdd    pmos    l=90n   w=3*wmin
+MN1    output    input    gnd    gnd    nmos    l=90n   w=wmin
+
+.ends

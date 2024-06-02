@@ -1,0 +1,13 @@
+**AND**
+.subckt  AND  input1  input2  output  wmin
+
+MP1  node2   input1  vdd    vdd  pmos  l=90n    w=3*wmin
+MP2  node2   input2  vdd    vdd  pmos  l=90n    w=3*wmin
+
+MN1  node2   input1  node1  gnd  nmos  l=90n    w=2*wmin
+MN2  node1   input2  gnd    gnd  nmos  l=90n    w=2*wmin
+
+MP3  output  node2   vdd    vdd  pmos  l=90n    w=3*wmin
+MN3  output  node2   gnd    gnd  nmos  l=90n    w=wmin
+
+.ends

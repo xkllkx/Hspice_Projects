@@ -1,5 +1,5 @@
 # Hspice
 ### DRAM
 ### SRAM
-### 高速除頻器
+### High frequency divider
 ### Manchester Adder

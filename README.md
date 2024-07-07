@@ -1,4 +1,4 @@
-# Hspice Project
+# Hspice Projects
 This repository contains implementations of four different components using HPICE.
 - DRAM
 - SRAM
